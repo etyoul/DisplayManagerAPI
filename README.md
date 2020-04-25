@@ -23,7 +23,7 @@ http://localhost:9496/display/message
 **동일한 네트워크의 다른 PC에서 호출하는 경우**
 
 ```http
-http://{ip address}:9496/display/message
+http://{IP}:9496/display/message
 ```
 
 
@@ -63,8 +63,10 @@ Content-Type:application/json
 
 #### 5.1.1 cURL
 
-```cURL
-curl -X POST -H "Content-Type: application/json" -d '{"target":"display15982", "message":"주차장에 오신 것을 환영합니다.\n00거 0000차량이 입차되었습니다."}' "http://localhost:9496/display/message"
+```curl
+curl -X POST -H "Content-Type: application/json" 
+  -d '{"target":"display15982", "message":"주차장에 오신 것을 환영합니다.\n00거 0000차량이 입차되었습니다."}'
+  "http://localhost:9496/display/message"
 ```
 
 
